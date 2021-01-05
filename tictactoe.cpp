@@ -35,7 +35,7 @@ void Input()
     else if (a == 2)
     {
 		if (matrix[0][1] == '2')
-            matrix[0][0] = player;
+            matrix[0][1] = player;
         else
 		{
 			cout << "Field is already in use try again!" << endl;
