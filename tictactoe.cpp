@@ -19,7 +19,7 @@ void Draw()
 void Input()
 {
     int a;
-	cout <<"Press the number of the field: ";
+	cout << "It's " << player << " turn. " <<"Press the number of the field: ";
 	cin >> a;
 
 	if (a == 1)
