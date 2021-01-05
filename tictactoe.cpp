@@ -2,8 +2,10 @@
 using namespace std;
 char matrix[3][3] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 char player = 'X';
+int n;
 void Draw()
 {
+    system("cls");
     cout << "Tic Tac Toe v1.0" << endl;
 	for (int i = 0; i < 3; i++)
 	{
@@ -92,9 +94,11 @@ char Win()
 }
 int main()
 {
+    n = 0;
     Draw();
     while (1)
 	{
+        n++;
 		Input();
 		Draw();
         if (Win() == 'X')
@@ -105,6 +109,11 @@ int main()
 		else if (Win() == 'O')
 		{
 			cout << "O wins!" << endl;
+			break;
+		}
+        else if (Win() == '/' && n == 9)
+		{
+			cout << "It's a draw!" << endl;
 			break;
 		}
 		TogglePlayer();
